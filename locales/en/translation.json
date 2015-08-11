@@ -1,0 +1,7 @@
+{
+    "app": {
+        "search" : "Search",
+        "marker" : "Your position",
+        "address" : "Enter your location"
+    }
+}

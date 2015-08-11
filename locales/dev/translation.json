@@ -1,0 +1,9 @@
+{
+    "app": {
+        "inputMap" : {
+            "search" : "Search",
+            "marker" : "You position",
+            "address" : "Enter your location"
+        }
+    }
+}

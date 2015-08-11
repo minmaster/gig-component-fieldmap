@@ -1,0 +1,21 @@
+{
+  "name": "gig-component-fieldmap",
+  "version": "0.0.1",
+  "homepage": "https://github.com/minmaster/gig-component-fieldmap",
+  "authors": [
+    "Pedro Peña <pedro.jose@gigigo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.0.9",
+    "google-map": "GoogleWebComponents/google-map#~1.0.3",
+    "i18next": "~1.10.2"
+  }
+}
