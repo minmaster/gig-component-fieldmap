@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             ' -->\n'
         },
         dirs: {
-            dest: 'dist',
+            dest: '',
             src: 'src'
         },
         concat: {
@@ -26,14 +26,14 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: ['src/*.html'],
-                dest: '<%= dirs.dest %>/<%= pkg.name %>.html'
+                dest: '<%= pkg.name %>.html'
             }
         },
         vulcanize: {
             default: {
                 options: {},
                 files: {
-                    '<%= dirs.src %>/<%= pkg.name %>.html': '<%= dirs.dest %>/<%= pkg.name %>.html'
+                    '<%= pkg.name %>.html': '<%= pkg.name %>.html'
                 }
             }
         },
