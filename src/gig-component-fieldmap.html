@@ -62,7 +62,7 @@
             <button type="button" on-click="search">{{txtSearch}}</button>
         </div>
 
-        <google-map id="map" latitude="40.4379543" longitude="-3.6795366">
+        <google-map id="map" latitude="40.4379543" longitude="-3.6795366" language="{{lang}}">
             <google-map-marker id="marker" title="{{txtMarker}}"></google-map-marker>
         </google-map>
 
@@ -91,6 +91,7 @@
                 is: 'gig-component-fieldmap',
                 listeners: {
                     'google-map-drag': 'drag',
+                    'google-map-dragend': 'drag',
                     'google-map-ready': 'readyMap'
                 },
                 readyMap: function () {
@@ -110,7 +111,7 @@
 
                     self = this;
 
-                    i18n.init({ lng: 'en' }, function() {
+                    i18n.init({ lng: self.lang }, function() {
                         self.txtSearch = i18n.t('search');
                         self.txtMarker = i18n.t('marker');
                         self.txtAddress = i18n.t('address');
@@ -170,7 +171,6 @@
                         this.$.marker.latitude = this.latitude;
                         this.$.marker.longitude = this.longitude;
                         this.value = this.$.map.latitude + ',' + this.$.map.longitude;
-
                         this._changePosition();
                     }
                 },
@@ -195,10 +195,12 @@
                     value: {
                         type: String,
                         notify: true
+                    },
+                    lang: {
+                        type: String,
+                        value: 'en'
                     }
                 }
             })
         })();
     </script>
-
-
